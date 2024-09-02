@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h2 style="text-align: center">Original</h2>
+    <img src="{{ asset('img/pexels-reggie-pankova.jpg') }}" style="max-height: 50vh;margin: 0 auto;display: block">
+
+    <h2 style="text-align: center">With Filter</h2>
+    <img src="{{ asset('img/pexels-reggie-pankova.jpg') | imagine_filter('thumb') }}" style="max-height: 99vh;margin: 0 auto;display: block">
+
+    <hr>
+    © Image by Reggie Pankova: https://www.pexels.com/de-de/foto/blume-flora-ganseblumchen-vertikaler-schuss-11213182/
+{% endblock %}
